@@ -1,0 +1,26 @@
+
+#app,
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.background {
+	height: 100%;
+	background-color: #f0f0f0;
+}
+
+.center {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 860px;
+	height: 440px;
+	background-color: #fafafa;
+	border-radius: 6px;
+	z-index: 2;
+}
