@@ -1,19 +1,25 @@
 <script setup lang="ts">
 import EventCard from './EventCard.vue'
 import './TimeLine.css'
-interface PropType {
-	cardValueList?: string[]
+export interface TimeLineType {
+	timeLineList: {
+		timeValue: string,
+		eventValueList: string[]
+	}[]
 }
-withDefaults(defineProps<PropType>(), {})
+withDefaults(defineProps<TimeLineType>(), {})
 </script>
 
 <template>
-	<div class="outer_line">
-		<div class="line_support" />
-		<div class="time_event">
-			<EventCard v-for="(cardValue, key) in cardValueList"
-					:key="key"
-					:value="cardValue" />
+	<div class="time_line">
+		<div class="timeline_container">
+			<div class="line_support" />
+			<div class="time_event">
+				<EventCard v-for="(timeLineValue, key) in timeLineList"
+						:key="key"
+						:timeValue="timeLineValue.timeValue"
+						:eventValueList="timeLineValue.eventValueList" />
+			</div>
 		</div>
 	</div>
 </template>
