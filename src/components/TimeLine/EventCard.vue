@@ -14,6 +14,7 @@ if (!result) {
 
 
 
+
 </script>
 <template>
 	<div class="event_container">
@@ -23,11 +24,12 @@ if (!result) {
 			</div>
 		</div>
 		<div class="event_infocard_container">
-			<div class="event_infocard "
+			<div class="event_infocard"
 					v-for="(eventVal, index) in eventValueList"
 					:key="index">
 				{{ eventVal }}
 			</div>
 		</div>
 	</div>
+
 </template>

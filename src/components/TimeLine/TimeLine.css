@@ -11,9 +11,12 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 60px;
 	width: 100%;
+	height: 60px;
 	background-color: #1e90ff;
+
+	padding: 6px;
+	display: flex;
 }
 .time_line .line_support {
 	top: 0;
@@ -25,23 +28,12 @@
 	height: 3px;
 	width: 100%;
 	border-top: 3px white dashed;
-}
-
-/* event card container */
-.time_line .time_event {
-	display: inline-block;
-	padding: 6px;
-	display: flex;
+	z-index: 0;
 }
 
 .event_container {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	height: max-content;
 	margin: 0 12px;
-	position: relative;
+	z-index: 1;
 }
 .event_container::after {
 	position: absolute;
@@ -68,9 +60,10 @@
 }
 
 .event_infocard_container {
-	margin: 20px 10px 20px 10px;
-	display: grid;
-	grid-template-rows: auto;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
