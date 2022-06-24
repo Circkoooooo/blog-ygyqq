@@ -1,0 +1,18 @@
+@media only screen and (max-width: 800px) {
+	.home_maincontent {
+		color: white;
+		margin-bottom: 100px;
+		max-width: min-content;
+	}
+	.home_maincontent .title {
+		animation: show-mobile 1s forwards;
+		font-size: 48px;
+	}
+
+	.home_maincontent .content {
+		opacity: 0.8;
+		margin-top: 20px;
+		font-size: 12px;
+		animation: contentShow 2s forwards;
+	}
+}

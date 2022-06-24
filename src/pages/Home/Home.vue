@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import './Home.css'
+import './Home.mob.css'
+import './keyframes.css'
 import SubMenu from '../../components/Submenu/Submenu.vue'
 const content =
 	`这是一个日常博客，记录了我在前端开发中遇到的问题以及学习并收获到的内容。
@@ -10,7 +12,7 @@ const menu = ['Home', 'Work', 'Archive']
 <template>
 	<div class="home_background">
 		<div class="home_overlay">
-			<div class="home_maincontnet">
+			<div class="home_maincontent">
 				<div class="title">One/Circle</div>
 				<div class="content">
 					{{ content }}
