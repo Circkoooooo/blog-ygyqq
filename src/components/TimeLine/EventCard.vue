@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface PropType {
 	timeValue: string,
-	eventValueList: string[]
+	eventValueList: string[],
 }
 const prop = withDefaults(defineProps<PropType>(), {})
 
