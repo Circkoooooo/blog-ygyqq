@@ -12,10 +12,7 @@ if (!result) {
 	throw new Error('do you require a string like \'yyyy-mm-dd\'')
 }
 
-// validate the order of the time
-const getTimeReg = /^([0-9]{4})-([0-9]{2})-([0-9]{2})/g
-const data = getTimeReg.exec(prop.timeValue)
-console.log(data)
+
 
 </script>
 <template>
@@ -31,7 +28,6 @@ console.log(data)
 					:key="index">
 				{{ eventVal }}
 			</div>
-
 		</div>
 	</div>
 </template>

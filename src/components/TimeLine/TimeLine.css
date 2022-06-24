@@ -4,7 +4,7 @@
 	height: 100%;
 	z-index: 0;
 	position: relative;
-	overflow: scroll;
+	overflow: hidden;
 }
 /* header timeline container */
 .timeline_container {
