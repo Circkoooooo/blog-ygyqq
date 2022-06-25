@@ -3,6 +3,7 @@ import Home from '../pages/Home/Home.vue'
 import TimeLine from '../pages/TimeLine/TimeLine.vue'
 const routes = [
 	{ path: '/', component: Home },
+	{ path: '/home', redirect: '/' },
 	{ path: '/timeline', component: TimeLine },
 ]
 

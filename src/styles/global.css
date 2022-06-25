@@ -3,8 +3,8 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-display: swap;
-	font-family: 'AlibabaPuhui', PingFang SC, HarmonyOS_Regular, Helvetica Neue,
-		Microsoft YaHei, sans-serif;
+	font-family: Microsoft YaHei, sans-serif, PingFang SC, 'default',
+		Helvetica Neue;
 }
 #app,
 html,
