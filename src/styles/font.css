@@ -1,9 +1,4 @@
 @font-face {
-	font-family: 'AlibabaSans';
-	src: url('/font/AlibabaSans-Medium.otf');
-}
-
-@font-face {
 	font-family: 'AlibabaPuhui';
-	src: url('/font/Alibaba-PuHuiTi-Regular.ttf');
+	src: url('/oss/alibabafont/Alibaba-PuHuiTi-Regular.ttf?versionId=CAEQJBiBgICO8.vsjBgiIGU5ZTMyZjUzNTNmZjRkMmM5YWNjMjk4NzViNzM0YTU4');
 }

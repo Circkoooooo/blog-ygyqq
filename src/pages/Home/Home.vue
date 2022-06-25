@@ -8,6 +8,8 @@ const content =
  	我会把开发工具Vue3、typescirpt，构建工具Vite，版本管理git，代码架构monorepo等的内容以及我的前端开发作品记录在此。`
 
 const menu = ['Home', 'Work', 'Archive']
+
+
 </script>
 <template>
 	<div class="home_background">
