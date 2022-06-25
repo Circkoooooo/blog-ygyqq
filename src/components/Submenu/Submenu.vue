@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { MenuConfigType } from '../../composables/useMenu'
 import './Submenu.css'
 interface PropType {
-	menuItems: string[]
+	menuItems: MenuConfigType[],
+	changeSelect: (index: number) => void,
+	selectIndex: number
 }
 withDefaults(defineProps<PropType>(), {})
-const selectIndex = ref(0)
 
-// 
-const changeSelect = (key: number) => {
-	selectIndex.value = key
-}
 </script>
 <template>
 	<div class="submenu">
@@ -18,7 +15,7 @@ const changeSelect = (key: number) => {
 				:class="{ select: selectIndex === key }"
 				@click="changeSelect(key)"
 				v-for="(item, key) in menuItems"
-				:key="key">{{ item }}</div>
+				:key="key">{{ item.name }}</div>
 
 	</div>
 </template>
