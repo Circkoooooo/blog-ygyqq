@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+	.submenu_container {
+		display: flex;
+
+		justify-content: center;
+		flex-direction: row;
+	}
+	.submenu {
+		padding: 20px 0 20px 0;
+		margin-bottom: 20px;
+		opacity: 0.45;
+		cursor: pointer;
+	}
+}

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import './SlideMenu.css'
+import './SlideMenu.mobile.css'
+
+
 </script>
 <template>
 	<div class="slide_menu">

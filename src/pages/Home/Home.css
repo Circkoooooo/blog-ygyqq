@@ -1,19 +1,21 @@
-.header{
-	position: absolute;
-	width: 100%;
+@media screen and (min-width: 767px) {
+	.header {
+		position: absolute;
+		width: 100%;
+	}
+
+	.content {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.left {
+		min-width: 500px;
+	}
 }
 .main {
 	background-color: #f0f0f0;
 	display: flex;
 	flex: 1;
-}
-.left {
-	min-width: 500px;
-}
-
-.content {
-	flex: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }

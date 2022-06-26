@@ -1,6 +1,5 @@
 .slide_content {
 	white-space: nowrap;
-	overflow-x: auto;
 }
 
 .slide_card {
@@ -11,8 +10,9 @@
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0;
+	transition: all 0.5s ease-in-out;
 }
-.check {
+.slide_card.check {
 	width: 300px;
 	opacity: 1;
 	font-size: 16px;
@@ -36,4 +36,18 @@
 
 .card_content .time {
 	opacity: 0.45;
+}
+
+/* 对移动中的元素应用的过渡 */
+.list-move {
+	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+@keyframes trans {
+	0% {
+		transform: translateY(-50px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
