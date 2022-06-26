@@ -3,8 +3,10 @@ import './SlideMenu.css'
 </script>
 <template>
 	<div class="slide_menu">
-		<div class="submenu">作品</div>
-		<div class="submenu check">文章</div>
-		<div class="submenu">关于</div>
+		<div class="submenu_container">
+			<div class="submenu">作品</div>
+			<div class="submenu check">文章</div>
+			<div class="submenu">关于</div>
+		</div>
 	</div>
 </template>

@@ -1,0 +1,39 @@
+.slide_content {
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+.slide_card {
+	width: 260px;
+	opacity: 0.6;
+	margin: 0 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0;
+}
+.check {
+	width: 300px;
+	opacity: 1;
+	font-size: 16px;
+}
+
+.slide_card > .card_img {
+	width: 100%;
+	border-radius: 8px;
+	vertical-align: middle;
+}
+
+.card_content {
+	height: 40px;
+	width: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 10px auto 0 auto;
+}
+
+.card_content .time {
+	opacity: 0.45;
+}

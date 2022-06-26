@@ -1,12 +1,19 @@
+.header{
+	position: absolute;
+	width: 100%;
+}
 .main {
 	background-color: #f0f0f0;
 	display: flex;
 	flex: 1;
 }
-.menu {
-	width: 480px;
+.left {
+	min-width: 500px;
 }
 
 .content {
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
