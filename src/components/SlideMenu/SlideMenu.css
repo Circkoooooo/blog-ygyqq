@@ -1,0 +1,22 @@
+.slide_menu {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+.slide_menu .submenu {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	border-radius: 8px;
+	margin: 30px 0;
+	opacity: 0.45;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.submenu.check {
+	font-size: 36px;
+	font-weight: bold;
+	opacity: 1;
+}

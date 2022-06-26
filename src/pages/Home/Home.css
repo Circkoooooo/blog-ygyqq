@@ -1,31 +1,12 @@
-.home_overlay {
-	background: linear-gradient(160deg, #319ea8, #ffd0a6);
+.main {
+	background-color: #f0f0f0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	border-radius: 8px;
-	animation: pageShow 1s forwards;
+	flex: 1;
 }
-/* content */
-.home_maincontent {
-	color: white;
-	margin-bottom: 100px;
-	max-width: min-content;
+.menu {
+	width: 480px;
 }
 
-.home_maincontent .title {
-	animation: show 1s forwards;
-	transition: all ease-in-out 1s;
-	font-size: 84px;
-}
-.home_maincontent .content {
-	opacity: 0.8;
-	padding: 0 40px 0 20px;
-	animation: contentShow 2s forwards;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
-	overflow: hidden;
+.content {
+	flex: 1;
 }

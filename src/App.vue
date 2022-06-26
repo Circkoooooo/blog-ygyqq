@@ -29,12 +29,5 @@ const { selectIndex, changeSelect } = useMenu(menuConfig)
 
 </script>
 <template>
-	<div class="background">
-		<router-view></router-view>
-		<div class="app_submenu">
-			<SubMenu :menuItems="menuConfig"
-					:selectIndex="selectIndex"
-					:changeSelect="changeSelect"></SubMenu>
-		</div>
-	</div>
+	<router-view></router-view>
 </template>
