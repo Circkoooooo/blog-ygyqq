@@ -32,12 +32,19 @@ const changeCard = (index: number) => {
 				<img class="card_img"
 						:src="item.imgPath">
 				<div class="card_content">
-					<p class="title">
-						{{ item.title }}
-					</p>
-					<p class="time">
-						{{ item.time }}
-					</p>
+					<div class="main">
+						<p class="title">
+							{{ item.title }}
+						</p>
+						<p class="time">
+							{{ item.time }}
+						</p>
+					</div>
+					<div class="other">
+						<p class="detail">
+							{{ item.detail }}
+						</p>
+					</div>
 				</div>
 			</div>
 		</TransitionGroup>
