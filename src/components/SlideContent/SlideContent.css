@@ -1,23 +1,25 @@
 .slide_content {
 	white-space: nowrap;
 	display: flex;
+
 	align-items: center;
 }
 
 .slide_card {
 	width: 260px;
 	opacity: 0.6;
-	margin: 0 20px;
+	margin: 0 40px;
 	border-radius: 8px;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0;
-	transition: all 0.5s ease-in-out;
+
+	animation: nocheck 0.5s forwards;
 }
 .slide_card.check {
-	width: 300px;
 	opacity: 1;
 	font-size: 16px;
+	animation: check 0.5s forwards;
 }
 
 .slide_card > .card_img {
@@ -29,28 +31,36 @@
 
 .card_content {
 	height: 40px;
-	width: max-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin: 10px auto 0 auto;
+	transition: all 0.5s ease-in-out;
 }
 
 .card_content .time {
 	opacity: 0.45;
 }
 
-/* 对移动中的元素应用的过渡 */
 .list-move {
-	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+	transition: all 0.6s ease;
 }
 
-@keyframes trans {
-	0% {
-		transform: translateY(-50px);
+@keyframes check {
+	from {
+		width: 260px;
 	}
-	100% {
-		transform: translateY(0);
+	to {
+		width: 300px;
+	}
+}
+
+@keyframes nocheck {
+	from {
+		width: 300px;
+	}
+	to {
+		width: 260px;
 	}
 }

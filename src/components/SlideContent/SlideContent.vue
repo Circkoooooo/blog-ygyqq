@@ -7,12 +7,18 @@ const prop = withDefaults(defineProps<{ contentList: ContentType[] }>(), {})
 
 const list = reactive(prop.contentList)
 const changeCard = (index: number) => {
-	if (index === 0) return
+	if (index === 0) {
+		if (prop.contentList[index].path !== undefined) {
+			window.open(prop.contentList[index].path, 'blank')
+		}
+		return
+	}
 	const value = list.shift()
 	if (value !== undefined) {
 		list.push(value)
 	}
 }
+
 </script>
 <template>
 	<div class="slide_content">

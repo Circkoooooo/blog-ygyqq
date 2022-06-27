@@ -2,6 +2,7 @@ export type ContentType = {
 	imgPath: string
 	title: string
 	time: string
+	path?: string
 }
 
 export type SlideMenuType = {

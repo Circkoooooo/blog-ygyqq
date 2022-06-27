@@ -14,7 +14,7 @@ const slideList: MenuConfigType[] = [
 	},
 	{
 		name: '文章',
-		router: 'archive'
+		router: 'article'
 	},
 	{
 		name: '关于',
