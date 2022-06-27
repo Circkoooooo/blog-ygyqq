@@ -27,7 +27,7 @@ const changeSlideMenuIndex = (index: number) => {
 }
 </script>
 <template>
-	<Header>Header</Header>
+	<Header>One/Circle</Header>
 	<div class="main">
 		<div class="left">
 			<SlideMenu :slideConfig="slideList"

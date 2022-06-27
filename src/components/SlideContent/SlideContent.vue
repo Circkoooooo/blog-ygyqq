@@ -9,7 +9,7 @@ const list = reactive(prop.contentList)
 const changeCard = (index: number) => {
 	if (index === 0) {
 		if (prop.contentList[index].path !== undefined) {
-			window.open(prop.contentList[index].path, 'blank')
+			window.open(prop.contentList[index].path, '_blank')
 		}
 		return
 	}
