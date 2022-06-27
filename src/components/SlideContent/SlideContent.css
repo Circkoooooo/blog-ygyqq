@@ -37,6 +37,7 @@
 	margin: 20px auto 0 auto;
 	transition: all 0.5s ease-in-out;
 	max-width: min-content;
+	animation: contentShow 1.5s forwards;
 }
 .card_content .main {
 	border-radius: 6px;
@@ -85,5 +86,15 @@
 	}
 	to {
 		width: 260px;
+	}
+}
+
+@keyframes contentShow {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }

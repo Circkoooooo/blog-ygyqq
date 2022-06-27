@@ -6,7 +6,6 @@ import SlideMenu from '../../components/SlideMenu/SlideMenu.vue'
 import useMenu, { MenuConfigType } from '../../composables/useMenu'
 
 
-
 const slideList: MenuConfigType[] = [
 	{
 		name: '作品',
@@ -21,10 +20,12 @@ const slideList: MenuConfigType[] = [
 		router: 'about'
 	}
 ]
+
 const routerMenu = useMenu(slideList)
 const changeSlideMenuIndex = (index: number) => {
 	routerMenu.changeSelect(index)
 }
+
 </script>
 <template>
 	<Header>One/Circle</Header>
