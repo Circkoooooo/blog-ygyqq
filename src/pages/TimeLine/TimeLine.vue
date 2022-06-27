@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import './TimeLine.css'
+
 import TimeLine from '../../components/TimeLine/TimeLine.vue'
 import { TimeLineType } from '../../components/TimeLine/TimeLine.vue'
 const config: TimeLineType = {
@@ -24,9 +24,5 @@ const config: TimeLineType = {
 }
 </script>
 <template>
-	<div class="background">
-		<div class="main">
-			<TimeLine :timeLineList="config.timeLineList"></TimeLine>
-		</div>
-	</div>
+	<TimeLine :timeLineList="config.timeLineList"></TimeLine>
 </template>

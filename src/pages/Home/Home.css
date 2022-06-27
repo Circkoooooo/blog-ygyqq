@@ -6,21 +6,29 @@
 
 	.content {
 		flex: 1;
-		display: flex;
-
+		width: 100%;
 		justify-content: center;
 		align-items: center;
 	}
 	.left {
+		min-width: 40%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-width: 40%;
 		transform: all 0.5s ease;
 	}
 	.main {
+		height: 100%;
 		display: flex;
-		flex: 1;
-		flex-direction: row;
 	}
+}
+
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
 }

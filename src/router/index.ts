@@ -1,14 +1,9 @@
 import * as VueRouter from 'vue-router'
 
 import Work from '../pages/Work/Work.vue'
-import TimeLine from '../pages/TimeLine/TimeLine.vue'
 const routes = [
 	{ path: '/', component: Work },
 	{ path: '/work', redirect: '/' },
-	{
-		path: '/archive',
-		component: TimeLine,
-	},
 ]
 
 const router = VueRouter.createRouter({
@@ -17,11 +12,11 @@ const router = VueRouter.createRouter({
 })
 
 export const changeRouter = async (path: string) => {
-	await router.push('/' + path)
+	return await router.push('/' + path)
 }
 
 // check validity of to route.
-router.beforeEach((to, from) => {
+router.beforeEach(to => {
 	if (
 		!routes.some(item => {
 			return item.path === to.fullPath
@@ -29,6 +24,7 @@ router.beforeEach((to, from) => {
 	) {
 		return false
 	}
+	return true
 })
 
 export default router

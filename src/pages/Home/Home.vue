@@ -24,8 +24,6 @@ const slideList: MenuConfigType[] = [
 const routerMenu = useMenu(slideList)
 const changeSlideMenuIndex = (index: number) => {
 	routerMenu.changeSelect(index)
-
-
 }
 </script>
 <template>
@@ -37,7 +35,9 @@ const changeSlideMenuIndex = (index: number) => {
 					@changeMenuIndex="changeSlideMenuIndex"></SlideMenu>
 		</div>
 		<div class="content">
-			<router-view></router-view>
+			<Transition>
+				<router-view></router-view>
+			</Transition>
 		</div>
 	</div>
 </template>
