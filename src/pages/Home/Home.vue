@@ -1,38 +1,43 @@
 <script setup lang="ts">
 import './Home.mobile.css'
 import './Home.css'
-import type { ContentType } from '../../Type'
 import Header from '../../components/Header/Header.vue'
 import SlideMenu from '../../components/SlideMenu/SlideMenu.vue'
-import SlideContent from '../../components/SlideContent/SlideContent.vue'
+import useMenu, { MenuConfigType } from '../../composables/useMenu'
 
-const contentList: ContentType[] = [{
-	imgPath: 'img/minesweeper.png',
-	title: 'minesweeper',
-	time: '2022-05-18'
-}, {
-	imgPath: 'img/minesweeper.png',
-	title: '2',
-	time: '2022-05-18'
-}, {
-	imgPath: 'img/minesweeper.png',
-	title: '3',
-	time: '2022-05-18'
-}, {
-	imgPath: 'img/minesweeper.png',
-	title: '4',
-	time: '2022-05-18'
-}]
 
+
+const slideList: MenuConfigType[] = [
+	{
+		name: '作品',
+		router: 'work'
+	},
+	{
+		name: '文章',
+		router: 'archive'
+	},
+	{
+		name: '关于',
+		router: 'about'
+	}
+]
+const routerMenu = useMenu(slideList)
+const changeSlideMenuIndex = (index: number) => {
+	routerMenu.changeSelect(index)
+
+
+}
 </script>
 <template>
 	<Header>Header</Header>
 	<div class="main">
 		<div class="left">
-			<SlideMenu></SlideMenu>
+			<SlideMenu :slideConfig="slideList"
+					:slideMenuIndex="routerMenu.selectIndex.value"
+					@changeMenuIndex="changeSlideMenuIndex"></SlideMenu>
 		</div>
 		<div class="content">
-			<SlideContent :contentList="contentList"></SlideContent>
+			<router-view></router-view>
 		</div>
 	</div>
 </template>

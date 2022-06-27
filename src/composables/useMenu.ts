@@ -26,7 +26,8 @@ export default (menuConfig: MenuConfigType[]) => {
 
 	const changeSelect = (index: number) => {
 		selectIndex.value = index
-		changeRouter(menuConfig[selectIndex.value].name)
+		changeRouter(menuConfig[selectIndex.value].router)
+		// console.log(menuConfig[selectIndex.value].router)
 	}
 
 	return {

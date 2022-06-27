@@ -3,3 +3,8 @@ export type ContentType = {
 	title: string
 	time: string
 }
+
+export type SlideMenuType = {
+	value: string
+	path?: string
+}

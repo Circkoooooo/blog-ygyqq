@@ -13,8 +13,6 @@ const changeCard = (index: number) => {
 		list.push(value)
 	}
 }
-
-
 </script>
 <template>
 	<div class="slide_content">

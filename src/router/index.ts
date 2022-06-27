@@ -1,13 +1,13 @@
 import * as VueRouter from 'vue-router'
-import Home from '../pages/Home/Home.vue'
-import Work from '../pages/Work/Work.vue'
 
+import Work from '../pages/Work/Work.vue'
+import TimeLine from '../pages/TimeLine/TimeLine.vue'
 const routes = [
-	{ path: '/', component: Home },
-	{ path: '/home', redirect: '/' },
+	{ path: '/', component: Work },
+	{ path: '/work', redirect: '/' },
 	{
-		path: '/work',
-		component: Work,
+		path: '/archive',
+		component: TimeLine,
 	},
 ]
 

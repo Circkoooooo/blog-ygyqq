@@ -1,8 +1,7 @@
 @media screen and (max-width: 768px) {
 	.submenu_container {
 		display: flex;
-
-		justify-content: center;
+		justify-content: space-around;
 		flex-direction: row;
 	}
 	.submenu {
@@ -10,5 +9,19 @@
 		margin-bottom: 20px;
 		opacity: 0.45;
 		cursor: pointer;
+	}
+	.submenu.check {
+		position: relative;
+	}
+	.submenu.check::after {
+		content: ' ';
+		display: block;
+		width: 30%;
+		height: 4px;
+		background-color: red;
+		bottom: 6px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
 	}
 }

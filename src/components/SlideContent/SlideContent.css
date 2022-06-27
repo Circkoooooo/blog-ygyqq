@@ -1,5 +1,7 @@
 .slide_content {
 	white-space: nowrap;
+	display: flex;
+	align-items: center;
 }
 
 .slide_card {
