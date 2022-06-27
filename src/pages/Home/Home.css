@@ -11,11 +11,10 @@
 		align-items: center;
 	}
 	.left {
-		min-width: 500px;
+		min-width: 40%;
 	}
 }
 .main {
-	/* background-color: #f0f0f0; */
 	display: flex;
 	flex: 1;
 }
