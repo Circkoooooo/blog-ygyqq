@@ -22,6 +22,7 @@
 	width: 100%;
 	border-radius: 8px;
 	vertical-align: middle;
+	box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.05);
 }
 
 .card_content {
