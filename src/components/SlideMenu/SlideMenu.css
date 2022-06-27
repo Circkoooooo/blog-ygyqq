@@ -1,9 +1,15 @@
 @media screen and (min-width: 767px) {
+	.slide_menu {
+		width: 100%;
+	}
 	.submenu_container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-right: 100px;
+		padding-left: 180px;
+		border-right: 1px solid rgba(0, 0, 0, 0.45);
 	}
 
 	.slide_menu .submenu {

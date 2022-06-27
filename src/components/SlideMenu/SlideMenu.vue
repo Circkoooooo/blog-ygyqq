@@ -8,6 +8,7 @@ defineEmits(['changeMenuIndex'])
 </script>
 <template>
 	<div class="slide_menu">
+
 		<div class="submenu_container">
 			<div class="submenu"
 					:class="{ check: index === slideMenuIndex }"
