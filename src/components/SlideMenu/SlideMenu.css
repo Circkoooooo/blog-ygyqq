@@ -1,16 +1,17 @@
 @media screen and (min-width: 767px) {
 	.slide_menu {
 		width: 100%;
+		border-right: 1px solid rgba(0, 0, 0, 0.45);
+		margin-right: 40px;
 	}
 	.submenu_container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin-right: 100px;
-		padding-left: 180px;
-		padding-right: 20px;
-		border-right: 1px solid rgba(0, 0, 0, 0.45);
+		padding-left: 200px;
+		transform: translateY(0);
+		transition: all ease-in-out 0.3s;
 	}
 
 	.slide_menu .submenu {
@@ -18,11 +19,13 @@
 		cursor: pointer;
 		font-size: 20px;
 		margin: 20px 0;
+		color: #747d8c;
 	}
 
 	.submenu.check {
 		font-size: 30px;
 		font-weight: bold;
 		opacity: 1;
+		color: #2c3e50;
 	}
 }

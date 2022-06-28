@@ -1,44 +1,26 @@
 <script setup lang="ts">
-import './Home.mobile.css'
 import './Home.css'
 import Header from '../../components/Header/Header.vue'
-import SlideMenu from '../../components/SlideMenu/SlideMenu.vue'
-import useMenu, { MenuConfigType } from '../../composables/useMenu'
+import Main from '../../components/Main/Main.vue'
+import Menu from '../../components/Menu/Menu.vue'
+import WorkCard from '../../components/WorkCard/WorkCard.vue'
 
-
-const slideList: MenuConfigType[] = [
-	{
-		name: '作品',
-		router: 'work'
-	},
-	{
-		name: '文章',
-		router: 'article'
-	},
-	{
-		name: '关于',
-		router: 'about'
-	}
-]
-
-const routerMenu = useMenu(slideList)
-const changeSlideMenuIndex = (index: number) => {
-	routerMenu.changeSelect(index)
-}
 
 </script>
 <template>
-	<Header>One/Circle</Header>
-	<div class="main">
-		<div class="left">
-			<SlideMenu :slideConfig="slideList"
-					:slideMenuIndex="routerMenu.selectIndex.value"
-					@changeMenuIndex="changeSlideMenuIndex"></SlideMenu>
+	<Header>one/circle</Header>
+	<Main>
+		<div class="article">
+			<div class="prose">
+				<Menu></Menu>
+			</div>
 		</div>
-		<div class="content">
-			<Transition>
-				<router-view></router-view>
-			</Transition>
+		<div class="container">
+			<div class="content_container">
+				<WorkCard></WorkCard>
+				<WorkCard></WorkCard>
+				<WorkCard></WorkCard>
+			</div>
 		</div>
-	</div>
+	</Main>
 </template>

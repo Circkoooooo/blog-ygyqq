@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import './Header.css'
+import './Main.css'
 </script>
 <template>
-	<div class="header">
+	<div class="main">
 		<slot></slot>
 	</div>
 </template>
