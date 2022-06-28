@@ -1,9 +1,11 @@
 import * as VueRouter from 'vue-router'
 
 import Work from '../pages/Work/Work.vue'
+import Blog from '../pages/Blog/Blog.vue'
 const routes = [
 	{ path: '/', component: Work },
 	{ path: '/work', redirect: '/' },
+	{ path: '/blog', component: Blog },
 ]
 
 const router = VueRouter.createRouter({

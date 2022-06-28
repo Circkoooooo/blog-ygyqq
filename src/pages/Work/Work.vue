@@ -1,24 +1,24 @@
 <script setup lang="ts">
+import WorkCard from '../../components/WorkCard/WorkCard.vue'
 import { ContentType } from '../../Type'
-import SlideContent from '../../components/SlideContent/SlideContent.vue'
-import './Work.css'
-
 const contentList: ContentType[] = [{
+	title: 'MineSweeper',
 	imgPath: 'img/minesweeper.png',
-	title: 'minesweeper',
-	detail: '已上线的扫雷小游戏',
 	time: '2022-05-18',
-	path: 'https://github.com/Circkoooooo/vue3-MineSweeper'
-}, {
+	detail: '一个线上的扫雷小游戏',
+	link: 'https://github.com/Circkoooooo/vue3-MineSweeper'
+},
+{
+	title: 'Vmind(monorepo)',
 	imgPath: 'img/vmind.png',
-	title: 'vmind(monorepo)',
-	detail: '提供api实现计算dom位置并绘制连线',
 	time: '2022-05-25',
-	path: 'https://github.com/Circkoooooo/vmind'
-}]
+	detail: '提供一个用于绘制节点直接的贝塞尔曲线的api',
+	link: 'https://github.com/Circkoooooo/vmind'
+},]
+
 </script>
 <template>
-	<div class="work_container">
-		<SlideContent :contentList="contentList"></SlideContent>
-	</div>
+	<WorkCard v-for="(item, index) in contentList"
+			:key="index"
+			:workCardInfo="item"></WorkCard>
 </template>

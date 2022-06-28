@@ -1,22 +1,22 @@
 <script setup lang="ts">
+import useMenu, { MenuConfigType } from '../../composables/useMenu'
 import './Menu.css'
 
-type LinkType = {
-	router: string
-}
-const linkList: LinkType[] = [
-	{ router: '作品' },
-	{ router: '博客' },
-	{ router: '关于' }
+const linkList: MenuConfigType[] = [
+	{ name: '作品', router: 'work' },
+	{ name: '博客', router: 'blog' },
+	{ name: '关于', router: 'about' }
 ]
 
+const { changeSelect } = useMenu(linkList)
 </script>
 <template>
 	<div class="menu">
 		<div class="submenu">
-			<a class="link"
+			<div class="link"
 					v-for="(item, index) in linkList"
-					:key="index">{{ item.router }}</a>
+					:key="index"
+					@click="changeSelect(index)">{{ item.name }}</div>
 		</div>
 	</div>
 </template>

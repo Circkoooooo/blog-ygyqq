@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import './Article.css'
+import './Blog.css'
 </script>
 
 <template>
-	<div class="article"></div>
+	<div class="blog"></div>
 </template>
