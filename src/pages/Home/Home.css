@@ -12,6 +12,7 @@
 	margin: 40px auto 0 auto;
 	max-width: 800px;
 	display: grid;
+	justify-content: center;
 	grid-template-columns: repeat(2, auto);
 }
 
@@ -19,6 +20,7 @@
 	.container .content_container {
 		width: 100%;
 		display: grid;
+		justify-content: center;
 		grid-template-columns: repeat(1, auto);
 	}
 }
