@@ -8,11 +8,13 @@ const linkList: MenuConfigType[] = [
 	{ name: '关于', router: 'about' }
 ]
 
-const { changeSelect } = useMenu(linkList)
+const { changeSelect, selectIndex } = useMenu(linkList)
+
 </script>
 <template>
 	<div class="menu">
-		<div class="submenu">
+		<div class="submenu"
+				:style="{ '--trans-size': `${selectIndex * 100}%` }">
 			<div class="link"
 					v-for="(item, index) in linkList"
 					:key="index"
