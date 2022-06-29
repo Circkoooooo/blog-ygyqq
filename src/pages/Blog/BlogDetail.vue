@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import './BlogDetail.css'
 import { useRoute } from 'vue-router'
-import blog from '../../../public/docs/blog.json'
+import blog from '../../docs/blog.json'
 import { onMounted, ref } from 'vue'
 import { marked } from 'marked'
 
@@ -12,7 +12,7 @@ const detail = blog[id]
 let temp = ref<string>()
 // 通过字符串的形式引入 ?raw
 onMounted(async () => {
-	const data = await import(`/docs/mds/${detail.title}.md?raw`)
+	const data = await import(`../../docs/mds/${detail.title}.md?raw`)
 	temp.value = marked(data.default)
 	// 检查
 	const pattern = /<.+>(.+)<\/h1>/g
