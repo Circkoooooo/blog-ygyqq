@@ -4,8 +4,6 @@ import Header from '../../components/Header/Header.vue'
 import Main from '../../components/Main/Main.vue'
 import Menu from '../../components/Menu/Menu.vue'
 
-
-
 </script>
 <template>
 	<Header>one/circle</Header>
