@@ -12,14 +12,7 @@ const detail = blog[id]
 let temp = ref<string>()
 // 通过字符串的形式引入 ?raw
 onMounted(async () => {
-	const isLocal = window.location.href.startsWith('http://localhost')
-	let data
-	if (isLocal) {
-		data = await import(`../../docs/mds/${detail.title}.md?raw`)
-	} else {
-		const url = new URL(`../../docs/mds/${detail.title}.md`, import.meta.url).href
-		data = await import(`${url}?raw`)
-	}
+	const data = await import(`../../docs/mds/${detail.title}.md?raw`)
 	temp.value = marked(data.default)
 	// 检查
 	const pattern = /<.+>(.+)<\/h1>/g
