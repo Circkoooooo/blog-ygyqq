@@ -2,9 +2,11 @@
 import './Blog.css'
 import BlogCard from '../../components/BlogCard/BlogCard.vue'
 import blog from '../../../docs/blog.json'
+import { BlogCardType } from '../../Type'
 
-const tags: { [key: string]: number } = {}
-const initTags = () => {
+const init = () => {
+	const tags: { [key: string]: number } = {}
+	// 给每一个blog赋值id值为在数组中的索引
 	blog.forEach(item => {
 		item.tag.forEach(tag => {
 			if (tags[tag] === undefined) {
@@ -14,9 +16,22 @@ const initTags = () => {
 			}
 		})
 	})
+	// 将数组内容逆转，最新的最上面显示
+	const newBlog: BlogCardType[] = blog.reverse() as BlogCardType[]
+	newBlog.forEach((item, index) => {
+		item.id = index
+	})
+	// 将tag的key和value提取出来
+	const tagList = Object.entries(tags)
+	return {
+		newBlog,
+		tagList
+	}
 }
-initTags()
-const tagList = Object.entries(tags)
+
+const { newBlog, tagList } = init()
+
+
 </script>
 
 <template>
@@ -27,7 +42,8 @@ const tagList = Object.entries(tags)
 					文章：<p class="number">{{ blog.length }}</p>
 				</div>
 				<div class="classic">
-					<p class="classic_detail" v-for="(item, index) in tagList"
+					<p class="classic_detail"
+							v-for="(item, index) in tagList"
 							:key="index">
 						{{ item[0] }}:{{ item[1] }}
 					</p>
@@ -35,7 +51,7 @@ const tagList = Object.entries(tags)
 			</div>
 		</div>
 		<div class="blog_center">
-			<BlogCard v-for="(item, index) in blog"
+			<BlogCard v-for="(item, index) in newBlog"
 					:key="index"
 					:blogCardInfo="item"></BlogCard>
 		</div>

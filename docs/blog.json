@@ -1,14 +1,8 @@
 [
 	{
-		"title": "pnpm配置monorepo",
-		"detail": "pnpm的配置",
-		"time": "2022-06-29",
-		"tag": ["pnpm"]
-	},
-	{
-		"title": "pnpm配置monorepo",
-		"detail": "pnpm的配置,pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置pnpm的配置",
-		"time": "2022-06-29",
-		"tag": ["vue"]
+		"title": "vue只用marked来渲染md",
+		"detail": "不使用vite的插件来手动解析md",
+		"time": "2022-06-30",
+		"tag": ["vue", "marked"]
 	}
 ]

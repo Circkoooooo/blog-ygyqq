@@ -8,11 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "marked": "^4.0.17",
     "vue": "^3.2.25",
     "vue-eslint-parser": "^9.0.3",
     "vue-router": "4"
   },
   "devDependencies": {
+    "@types/marked": "^4.0.3",
+    "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "@vitejs/plugin-vue": "^2.3.3",

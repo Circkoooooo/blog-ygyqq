@@ -1,0 +1,29 @@
+:root {
+	--title-font: 28px;
+	--h1-font: 20px;
+}
+.blog_detail {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.blog_detail .title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	margin-bottom: 20px;
+	font-size: var(--title-font);
+	color: #57606f;
+	font-weight: bold;
+}
+.blog_detail .h1 {
+	font-size: var(--h1-font);
+	font-weight: 400;
+	width: fit-content;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
