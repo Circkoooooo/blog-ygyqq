@@ -19,16 +19,10 @@
 		"@typescript-eslint/eslint-plugin": "^5.29.0",
 		"@typescript-eslint/parser": "^5.29.0",
 		"@vitejs/plugin-vue": "^2.3.3",
-		"babel-plugin-dynamic-import-webpack": "^1.1.0",
 		"eslint": "^8.18.0",
 		"eslint-plugin-vue": "^9.1.1",
 		"typescript": "^4.5.4",
 		"vite": "^2.9.9",
 		"vue-tsc": "^0.34.7"
-	},
-	"babel": {
-		"plugins": [
-			"@babel/plugin-syntax-dynamic-import"
-		]
 	}
 }
