@@ -13,7 +13,7 @@ let temp = ref<string>()
 // 通过字符串的形式引入 ?raw
 onMounted(async () => {
 	const isLocal = window.location.href.startsWith('http://localhost')
-	let data: any
+	let data
 	if (isLocal) {
 		data = await import(`../../docs/mds/${detail.title}.md?raw`)
 	} else {

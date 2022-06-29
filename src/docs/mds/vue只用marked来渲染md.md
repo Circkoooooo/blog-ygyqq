@@ -6,6 +6,7 @@
 3. 调用markdown，用响应式来把内容渲染到页面上去。
 
 ## 核心代码
+
 ```vue
 let temp = ref<string>()
 // 通过字符串的形式引入 ?raw
