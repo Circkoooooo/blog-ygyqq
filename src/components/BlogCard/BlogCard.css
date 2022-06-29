@@ -44,3 +44,7 @@
 .blogcard .add .time {
 	margin-left: auto;
 }
+
+.blogcard .add .tag_container {
+	display: flex;
+}

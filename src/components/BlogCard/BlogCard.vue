@@ -12,8 +12,10 @@ withDefaults(defineProps<{ blogCardInfo: BlogCardType }>(), {})
 			<div class="detail">{{ blogCardInfo.detail }}</div>
 		</div>
 		<div class="add">
-			<div class="tag">
-				<Tag tagVal="pnpm"></Tag>
+			<div class="tag_container">
+				<Tag v-for="(item, index) in blogCardInfo.tag"
+						:key="index"
+						:tagVal="item"></Tag>
 			</div>
 			<div class="time">{{ blogCardInfo.time }}</div>
 		</div>

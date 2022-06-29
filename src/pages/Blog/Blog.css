@@ -14,9 +14,11 @@
 }
 
 .blog_aside {
+	opacity: 0;
+	animation: show 1s forwards 0.3s;
 	width: 200px;
 	padding: 20px;
-	margin-right: 100px;
+	margin-right: 40px;
 	border-radius: 4px;
 	height: 100%;
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -48,9 +50,29 @@
 	max-width: 300px;
 }
 
+.classic {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.45);
+}
+.classic .classic_detail {
+	margin: 4px 0;
+}
 @media screen and (max-width: 840px) {
 	.blog_aside,
 	.blog_right {
 		display: none;
+	}
+}
+
+@keyframes show {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }

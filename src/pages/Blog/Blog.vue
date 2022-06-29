@@ -2,6 +2,21 @@
 import './Blog.css'
 import BlogCard from '../../components/BlogCard/BlogCard.vue'
 import blog from '../../../docs/blog.json'
+
+const tags: { [key: string]: number } = {}
+const initTags = () => {
+	blog.forEach(item => {
+		item.tag.forEach(tag => {
+			if (tags[tag] === undefined) {
+				tags[tag] = 1
+			} else {
+				tags[tag]++
+			}
+		})
+	})
+}
+initTags()
+const tagList = Object.entries(tags)
 </script>
 
 <template>
@@ -12,8 +27,9 @@ import blog from '../../../docs/blog.json'
 					文章：<p class="number">{{ blog.length }}</p>
 				</div>
 				<div class="classic">
-					<p>
-						pnpm:1
+					<p class="classic_detail" v-for="(item, index) in tagList"
+							:key="index">
+						{{ item[0] }}:{{ item[1] }}
 					</p>
 				</div>
 			</div>
