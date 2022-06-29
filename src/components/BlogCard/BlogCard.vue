@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import './BlogCard.css'
 import { BlogCardType } from '../../Type'
+import Tag from '../Tag/Tag.vue'
 withDefaults(defineProps<{ blogCardInfo: BlogCardType }>(), {})
 </script>
 
@@ -11,8 +12,10 @@ withDefaults(defineProps<{ blogCardInfo: BlogCardType }>(), {})
 			<div class="detail">{{ blogCardInfo.detail }}</div>
 		</div>
 		<div class="add">
-			<div class="tag">{{blogCardInfo.tag}}</div>
-			<div class="time">{{blogCardInfo.time}}</div>
+			<div class="tag">
+				<Tag tagVal="pnpm"></Tag>
+			</div>
+			<div class="time">{{ blogCardInfo.time }}</div>
 		</div>
 	</div>
 </template>

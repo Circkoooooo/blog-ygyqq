@@ -3,11 +3,14 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-display: swap;
-	font-family: Microsoft YaHei, sans-serif, PingFang SC, 'default',
-		Helvetica Neue;
+	font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+		'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 }
 #app,
 html,
 body {
 	height: 100%;
+}
+body {
+	background-color: #f5f5f5;
 }
