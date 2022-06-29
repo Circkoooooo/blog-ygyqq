@@ -1,4 +1,4 @@
-export type ContentType = {
+export interface ContentType {
 	imgPath: string
 	title: string
 	detail: string
@@ -6,7 +6,9 @@ export type ContentType = {
 	link?: string
 }
 
-export type SlideMenuType = {
-	value: string
-	path?: string
+export interface BlogCardType {
+	title: string
+	detail: string
+	time: string
+	tag: string[]
 }

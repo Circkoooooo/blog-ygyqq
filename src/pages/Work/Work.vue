@@ -15,7 +15,7 @@ const contentList: ContentType[] = [{
 	time: '2022-05-25',
 	detail: '提供一个用于绘制节点直接的贝塞尔曲线的api',
 	link: 'https://github.com/Circkoooooo/vmind'
-},]
+}]
 
 </script>
 <template>
