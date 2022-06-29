@@ -4,6 +4,6 @@ import './BlogCard.css'
 
 <template>
 	<div class="blogcard">
-
+		
 	</div>
 </template>

@@ -1,7 +1,10 @@
-.blog {	
+.blog {
 	width: 100%;
-
-	background-color: red;
 	position: relative;
+	margin-top: 40px;
 }
 
+.blog_center {
+	max-width: 500px;
+	margin: 0 auto;
+}
