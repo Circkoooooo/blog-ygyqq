@@ -2,7 +2,7 @@
 import './BlogDetail.css'
 import { useRoute } from 'vue-router'
 import blog from '../../docs/blog.json'
-import { onMounted, ref } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import { marked } from 'marked'
 
 const route = useRoute()
@@ -25,6 +25,7 @@ onMounted(async () => {
 </script>
 <template>
 	<div class="blog_detail">
+		<app></app>
 		<div v-html="temp"></div>
 	</div>
 </template>
