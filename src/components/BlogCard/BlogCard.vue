@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import './Blog.css'
+import './BlogCard.css'
 </script>
 
 <template>
-	<div class="blog content_container">
-		
+	<div class="blogcard">
+
 	</div>
 </template>

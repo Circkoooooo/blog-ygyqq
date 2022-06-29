@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import './Work.css'
 import WorkCard from '../../components/WorkCard/WorkCard.vue'
 import { ContentType } from '../../Type'
 const contentList: ContentType[] = [{
@@ -18,7 +19,9 @@ const contentList: ContentType[] = [{
 
 </script>
 <template>
-	<WorkCard v-for="(item, index) in contentList"
-			:key="index"
-			:workCardInfo="item"></WorkCard>
+	<div class="work content_container">
+		<WorkCard v-for="(item, index) in contentList"
+				:key="index"
+				:workCardInfo="item"></WorkCard>
+	</div>
 </template>

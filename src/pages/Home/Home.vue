@@ -14,9 +14,7 @@ import Menu from '../../components/Menu/Menu.vue'
 			</div>
 		</div>
 		<div class="container">
-			<div class="content_container">
-				<router-view></router-view>
-			</div>
+			<router-view></router-view>
 		</div>
 	</Main>
 </template>
