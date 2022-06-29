@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import './Blog.css'
 import BlogCard from '../../components/BlogCard/BlogCard.vue'
-import blog from '../../../docs/blog.json'
+import blog from '../../../public/docs/blog.json'
 import { BlogCardType } from '../../Type'
 
 const init = () => {
