@@ -16,11 +16,10 @@ onMounted(async () => {
 	let data: any
 	if (isLocal) {
 		data = await import(`../../docs/mds/${detail.title}.md?raw`)
-
 	} else {
 		const url = new URL(`../../docs/mds/${detail.title}.md`, import.meta.url).href
+		data = await import(`${url}?raw`)
 	}
-	console.log(data)
 	temp.value = marked(data.default)
 	// 检查
 	const pattern = /<.+>(.+)<\/h1>/g
@@ -28,7 +27,7 @@ onMounted(async () => {
 	if (res !== null && res[1] !== detail.title) {
 		throw new Error(`The title should be '${detail.title}'`)
 	}
-	
+
 })
 
 </script>
