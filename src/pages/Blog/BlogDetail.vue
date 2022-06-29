@@ -2,7 +2,7 @@
 import './BlogDetail.css'
 import { useRoute } from 'vue-router'
 import blog from '../../docs/blog.json'
-import { defineComponent, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { marked } from 'marked'
 
 const route = useRoute()
@@ -12,7 +12,15 @@ const detail = blog[id]
 let temp = ref<string>()
 // 通过字符串的形式引入 ?raw
 onMounted(async () => {
-	const data = await import(`../../docs/mds/${detail.title}.md?raw`)
+	const isLocal = window.location.href.startsWith('http://localhost')
+	let data: any
+	if (isLocal) {
+		data = await import(`../../docs/mds/${detail.title}.md?raw`)
+
+	} else {
+		const url = new URL(`../../docs/mds/${detail.title}.md`, import.meta.url).href
+	}
+	console.log(data)
 	temp.value = marked(data.default)
 	// 检查
 	const pattern = /<.+>(.+)<\/h1>/g
@@ -20,6 +28,7 @@ onMounted(async () => {
 	if (res !== null && res[1] !== detail.title) {
 		throw new Error(`The title should be '${detail.title}'`)
 	}
+	
 })
 
 </script>
