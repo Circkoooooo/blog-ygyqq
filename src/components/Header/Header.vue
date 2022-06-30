@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import './Header.css'
-const props = defineProps({ height: Number })
+defineProps({ height: Number })
 </script>
 <template>
 	<div class="header"

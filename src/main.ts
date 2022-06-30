@@ -8,10 +8,11 @@ import 'highlight.js/styles/github.css'
 import router from './router'
 
 const app = createApp(Home)
-app.directive('highlight', function (el: any) {
+
+app.directive('highlight', function (el: Element) {
 	const blocks = el.querySelectorAll('pre code')
-	blocks.forEach((block: any) => {
-		hljs.highlightBlock(block)
+	blocks.forEach((block: Element) => {
+		hljs.highlightBlock(block as HTMLElement)
 	})
 })
 
