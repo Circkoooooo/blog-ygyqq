@@ -7,6 +7,8 @@ import { BlogCardType } from '../../Type'
 const init = () => {
 	const tags: { [key: string]: number } = {}
 	// 给每一个blog赋值id值为在数组中的索引
+	// 将数组内容逆转，最新的最上面显示
+	const newBlog: BlogCardType[] = []
 	blog.forEach(item => {
 		item.tag.forEach(tag => {
 			if (tags[tag] === undefined) {
@@ -15,9 +17,9 @@ const init = () => {
 				tags[tag]++
 			}
 		})
+		newBlog.unshift(item as BlogCardType)
 	})
-	// 将数组内容逆转，最新的最上面显示
-	const newBlog: BlogCardType[] = blog.reverse() as BlogCardType[]
+
 	newBlog.forEach((item, index) => {
 		item.id = index
 	})
