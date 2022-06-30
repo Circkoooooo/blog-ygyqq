@@ -3,6 +3,7 @@ import './Blog.css'
 import BlogCard from '../../components/BlogCard/BlogCard.vue'
 import blog from '../../docs/blog.json'
 import { BlogCardType } from '../../Type'
+import { computed } from 'vue'
 
 const init = () => {
 	const tags: { [key: string]: number } = {}
@@ -17,9 +18,8 @@ const init = () => {
 				tags[tag]++
 			}
 		})
-		newBlog.unshift(item as BlogCardType)
+		newBlog.push(item as BlogCardType)
 	})
-
 	newBlog.forEach((item, index) => {
 		item.id = index
 	})
@@ -34,7 +34,13 @@ const init = () => {
 }
 
 const { newBlog, tagList } = init()
-
+const renderBlog = computed(() => {
+	const list: BlogCardType[] = []
+	newBlog.forEach(item => {
+		list.unshift(item)
+	})
+	return list
+})
 
 </script>
 
@@ -55,8 +61,8 @@ const { newBlog, tagList } = init()
 			</div>
 		</div>
 		<div class="blog_center">
-			<BlogCard v-for="(item, index) in newBlog"
-					:key="index"
+			<BlogCard v-for="item in renderBlog"
+					:key="item.id"
 					:blogCardInfo="item"></BlogCard>
 		</div>
 		<div class="blog_right">
