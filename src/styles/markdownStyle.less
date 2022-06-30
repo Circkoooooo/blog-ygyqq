@@ -1,19 +1,122 @@
-@h1-color: rgba(0, 0, 0, 0.85);
-@h2-color: rgba(0, 0, 0, 0.75);
+@h1-color: rgba(0, 0, 0, 0.75);
+@h2-color: rgba(0, 0, 0, 0.65);
 
 .md2vue-wrapper {
+
+	background-color: #fff;
+	padding: 40px;
+
+	* {
+		font-size: 16px;
+	}
+
 	h1 {
 		color: @h1-color;
+		font-weight: 800;
+		font-size: 28px;
+		padding: 10px 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	h2 {
 		color: @h2-color;
+		font-size: 24px;
+		font-weight: 600;
+		padding: 10px 0;
 	}
 
 	h3,
 	h4,
 	h5 {
+		font-weight: 600;
+		font-size: 20px;
 		color: @h2-color;
 
 	}
+
+	strong {
+		color: @h2-color;
+		font-weight: 600;
+
+	}
+
+	// 斜体
+	em {
+		font-style: italic;
+	}
+
+	// 引用 >
+	blockquote {
+		padding: 10px;
+		background-color: #fafbfc;
+		margin: 10px 0;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		border-radius: 4px;
+	}
+
+	// 有序列表
+	ol,
+	ul {
+		margin: 20px 0 20px 20px;
+
+		li {
+			height: 30px;
+
+			&::marker {
+				color: rgba(0, 0, 0, 0.45);
+				font-weight: bold;
+			}
+		}
+	}
+
+	// 代码块
+	pre {
+		padding: 4px;
+		background-color: rgba(0, 0, 0, 0.05);
+		border-radius: 6px;
+		margin: 10px 0;
+	}
+
+	// 代码行
+	p {
+		margin: 10px 0;
+
+		code {
+			padding: 10px;
+			border: 4px solid rgba(0, 0, 0, 0.05);
+			background-color: #ffffff;
+			display: block;
+			padding: 10px;
+			border-radius: 6px;
+		}
+	}
+
+	// 分割线
+	hr {}
+
+	// 链接
+	a {}
+
+	// 图片
+	img {}
+
+	// 表格
+	table {
+		thead {}
+
+		tbody {}
+	}
+
+	// 代码块
+	.md-code-hijs {
+		pre {
+			code.hljs {}
+		}
+	}
+
+	// 删除线
+	del {}
 }

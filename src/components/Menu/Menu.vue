@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import useMenu, { MenuConfigType } from '../../composables/useMenu'
 import './Menu.css'
 
@@ -7,9 +8,23 @@ const linkList: MenuConfigType[] = [
 	{ name: '博客', router: 'blog' },
 	{ name: '关于', router: 'about' }
 ]
-
 const { changeSelect, selectIndex } = useMenu(linkList)
 
+onMounted(() => {
+	const init = () => {
+		const current = window.location.hash.split('/')[1]
+		if (current !== undefined) {
+			linkList.forEach((item, index) => {
+				if (current === item.router) {
+					changeSelect(index)
+				}
+			})
+		} else {
+			changeSelect(0)
+		}
+	}
+	init()
+})
 </script>
 <template>
 	<div class="menu">

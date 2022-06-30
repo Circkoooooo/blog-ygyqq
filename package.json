@@ -9,6 +9,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"highlight.js": "^11.5.1",
 		"less": "^4.1.3",
 		"less-loader": "^11.0.0",
 		"marked": "^4.0.17",

@@ -7,7 +7,6 @@ import { useRouter } from 'vue-router'
 withDefaults(defineProps<{ blogCardInfo: BlogCardType }>(), {})
 const router = useRouter()
 const detail = (id: number) => {
-	console.log(id)
 	router.push({
 		name: 'detail',
 		params: {

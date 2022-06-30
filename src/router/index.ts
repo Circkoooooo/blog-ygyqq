@@ -8,7 +8,7 @@ const routes = [
 	{ path: '/', component: Work },
 	{ path: '/work', redirect: '/' },
 	{ path: '/blog', component: Blog },
-	{ name: 'detail', path: '/detail/:id', component: BlogDetail },
+	{ name: 'detail', path: '/blog/detail/:id', component: BlogDetail },
 ]
 
 const router = VueRouter.createRouter({
