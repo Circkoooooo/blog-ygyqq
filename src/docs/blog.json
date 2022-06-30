@@ -3,12 +3,12 @@
 		"title": "vue只用marked来渲染md",
 		"detail": "不使用vite的插件来手动解析md",
 		"time": "2022-06-30",
-		"tag": ["vue", "marked"]
+		"tag": ["vue", "marked-vite"]
 	},
 	{
-		"title": "pnpm配置monorepo",
-		"detail": "不使用vite的插件来手动解析md",
+		"title": "pnpm管理的monorepo",
+		"detail": "从初始化到rollup打包monorepo的ts项目",
 		"time": "2022-06-30",
-		"tag": ["vue", "marked"]
+		"tag": ["前端工程化"]
 	}
 ]

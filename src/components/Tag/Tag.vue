@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import './Tag.css'
 const prop = withDefaults(defineProps<{ tagVal: string }>(), {})
-const color = ['#ffa502', '#20bf6b', '#1e90ff', '#6c5ce7']
+const color = ['#ffa502', '#20bf6b', '#1e90ff', '#6c5ce7', '#b1d5c8']
 const getColor = () => {
 	if (prop.tagVal.length <= 3) {
 		return color[1]
