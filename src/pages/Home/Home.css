@@ -19,3 +19,32 @@
 		max-width: 600px;
 	}
 }
+
+.to_top {
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px;
+	width: 60px;
+	font-weight: bold;
+	position: fixed;
+	bottom: 8px;
+	right: 0;
+	background-color: #f0f0f0;
+	opacity: 0;
+	transition: all ease-in-out 0.3s;
+	border: 2px solid rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.65);
+	border-radius: 6px;
+}
+.to_top:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.to_top.show {
+	opacity: 1;
+}

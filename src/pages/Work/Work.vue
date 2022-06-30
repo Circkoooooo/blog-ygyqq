@@ -2,6 +2,7 @@
 import './Work.css'
 import WorkCard from '../../components/WorkCard/WorkCard.vue'
 import { ContentType } from '../../Type'
+import { computed } from 'vue'
 const contentList: ContentType[] = [{
 	title: 'MineSweeper',
 	imgPath: 'img/minesweeper.png',
@@ -17,10 +18,17 @@ const contentList: ContentType[] = [{
 	link: 'https://github.com/Circkoooooo/vmind'
 }]
 
+const list = computed(() => {
+	const newList: ContentType[] = []
+	contentList.forEach(item => {
+		newList.unshift(item)
+	})
+	return newList
+})
 </script>
 <template>
 	<div class="work content_container">
-		<WorkCard v-for="(item, index) in contentList"
+		<WorkCard v-for="(item, index) in list"
 				:key="index"
 				:workCardInfo="item"></WorkCard>
 	</div>

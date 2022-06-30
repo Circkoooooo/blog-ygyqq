@@ -131,15 +131,20 @@
 	}
 
 
+	// 删除线
+	del {
+		position: relative;
 
-	// 代码块
-	.md-code-hijs {
-		pre {
-			code.hljs {}
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 2px;
+			background-color: rgba(0, 0, 0, 0.65);
 		}
 	}
-
-	// 删除线
-	del {}
 
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import useMenu, { MenuConfigType } from '../../composables/useMenu'
 import './Menu.css'
 
@@ -25,6 +25,8 @@ onMounted(() => {
 	}
 	init()
 })
+
+
 </script>
 <template>
 	<div class="menu">
@@ -36,4 +38,5 @@ onMounted(() => {
 					@click="changeSelect(index)">{{ item.name }}</div>
 		</div>
 	</div>
+
 </template>

@@ -42,6 +42,7 @@ const renderBlog = computed(() => {
 	return list
 })
 
+
 </script>
 
 <template>
