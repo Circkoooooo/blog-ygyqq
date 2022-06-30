@@ -4,5 +4,11 @@
 		"detail": "不使用vite的插件来手动解析md",
 		"time": "2022-06-30",
 		"tag": ["vue", "marked"]
+	},
+	{
+		"title": "pnpm配置monorepo",
+		"detail": "不使用vite的插件来手动解析md",
+		"time": "2022-06-30",
+		"tag": ["vue", "marked"]
 	}
 ]

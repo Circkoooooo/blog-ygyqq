@@ -21,8 +21,10 @@ const init = () => {
 	newBlog.forEach((item, index) => {
 		item.id = index
 	})
+
 	// 将tag的key和value提取出来
 	const tagList = Object.entries(tags)
+
 	return {
 		newBlog,
 		tagList
