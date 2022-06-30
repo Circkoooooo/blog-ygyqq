@@ -15,7 +15,6 @@
 		font-weight: 800;
 		font-size: 28px;
 		padding: 10px 0;
-
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -26,6 +25,7 @@
 		font-size: 24px;
 		font-weight: 600;
 		padding: 10px 0;
+		margin-top: 40px;
 	}
 
 	h3,
@@ -34,12 +34,13 @@
 		font-weight: 600;
 		font-size: 20px;
 		color: @h2-color;
-
+		margin-top: 40px;
 	}
 
 	strong {
 		color: @h2-color;
 		font-weight: 600;
+		padding: 0 3px;
 
 	}
 
@@ -50,29 +51,34 @@
 
 	// 引用 >
 	blockquote {
-		padding: 10px;
+		padding: 2px 5px 2px 10px;
 		background-color: #fafbfc;
 		margin: 10px 0;
-		border: 1px solid rgba(0, 0, 0, 0.05);
-		border-radius: 4px;
+		border-radius: 00 4px 4px 0;
+		border-left: 3px solid rgba(0, 0, 0, 0.45);
 	}
 
 	// 有序列表
-	ol,
-	ul {
+	ol {
 		margin: 20px 0 20px 20px;
+		list-style: none;
 
 		li {
-			height: 30px;
+			padding: 5px 0;
+			list-style-type: decimal;
+		}
+	}
 
-			&::marker {
-				color: rgba(0, 0, 0, 0.45);
-				font-weight: bold;
-			}
+	ul {
+		li {
+			list-style-type: "-";
+			padding-left: 10px;
+			margin: 20px 0 20px 10px;
 		}
 	}
 
 	// 代码块
+
 	pre {
 		padding: 4px;
 		background-color: rgba(0, 0, 0, 0.05);
@@ -105,10 +111,26 @@
 
 	// 表格
 	table {
-		thead {}
+		padding: 10px;
+		border-collapse: collapse;
 
-		tbody {}
+		tr {
+			border: 2px solid rgba(0, 0, 0, 0.45);
+
+			th {
+				font-weight: bold;
+				padding: 10px;
+				text-align: center;
+			}
+
+			td {
+				padding: 10px;
+				text-align: center;
+			}
+		}
 	}
+
+
 
 	// 代码块
 	.md-code-hijs {
@@ -119,4 +141,5 @@
 
 	// 删除线
 	del {}
+
 }

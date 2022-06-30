@@ -1,4 +1,5 @@
 # vue只用marked来渲染md
+> 2022-06-30
 
 ## 思路
 1. 使用marked库提供的**字符串**解析markdown的api
