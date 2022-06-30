@@ -12,7 +12,7 @@ const routes = [
 ]
 
 const router = VueRouter.createRouter({
-	history: VueRouter.createWebHashHistory(),
+	history: VueRouter.createWebHistory(),
 	routes,
 })
 
@@ -29,17 +29,5 @@ export const changeRouter = async (
 		})
 	}
 }
-
-// check validity of to route.
-// router.beforeEach(to => {
-// 	if (
-// 		!routes.some(item => {
-// 			return item.path === to.fullPath
-// 		})
-// 	) {
-// 		return false
-// 	}
-// 	return true
-// })
 
 export default router
