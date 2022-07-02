@@ -1,6 +1,10 @@
-# vue只用marked来渲染md
-> 2022-06-30
+# vue用marked渲染markdown
 
+> 2022/7/2 23:17:19
+
+<!-- >从这里开始输入你的内容 -->
+
+> 该文档由circledown cli生成。
 ## 思路
 1. 使用marked库提供的**字符串**解析markdown的api
 2. 通过异步来动态的引入markdown的raw格式(纯字符串格式)
@@ -22,5 +26,3 @@ onMounted(async () => {
 	}
 })
 ```
-
-

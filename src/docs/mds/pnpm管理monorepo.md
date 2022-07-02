@@ -1,5 +1,12 @@
-# pnpm管理的monorepo
+# pnpm管理monorepo
 
+> 2022/7/2 23:13:21
+
+<!-- >从这里开始输入你的内容 -->
+
+> 该文档由circledown cli生成。
+		
+		
 ## 1.  初始化
 ```
 npm init 

@@ -1,5 +1,5 @@
-@h1-color: rgba(0, 0, 0, 0.75);
-@h2-color: rgba(0, 0, 0, 0.65);
+@h1-color: #161209;
+@h2-color: #161209;
 
 .md2vue-wrapper {
 
@@ -7,32 +7,42 @@
 	padding: 40px;
 
 	* {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	h1 {
 		color: @h1-color;
 		font-weight: 800;
-		font-size: 28px;
+		font-size: 24px;
 		padding: 10px 0;
 		display: flex;
-		justify-content: center;
+		// justify-content: center;
 		align-items: center;
+
 	}
 
 	h2 {
-		color: @h2-color;
-		font-size: 24px;
+		color: #000;
+		font-size: 20px;
 		font-weight: 600;
 		padding: 10px 0;
 		margin-top: 40px;
+
+		&::before {
+			color: #2d96bd;
+			content: "#";
+			width: 100px;
+			height: 100px;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	h3,
 	h4,
 	h5 {
 		font-weight: 600;
-		font-size: 20px;
+		font-size: 18px;
 		color: @h2-color;
 		margin-top: 40px;
 	}
@@ -56,6 +66,7 @@
 		margin: 10px 0;
 		border-radius: 00 4px 4px 0;
 		border-left: 3px solid rgba(0, 0, 0, 0.45);
+
 	}
 
 	// 有序列表
