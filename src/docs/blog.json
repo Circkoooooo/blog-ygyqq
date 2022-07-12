@@ -1,35 +1,32 @@
 [
-  {
-    "title": "vue用marked渲染markdown",
-    "detail": "不使用vite插件来解析markdown",
-    "time": "2022/7/2 23:17:19",
-    "tag": [
-      "vue"
-    ]
-  },
-  {
-    "title": "pnpm管理monorepo",
-    "detail": "从初始化到rollup打包monorepo的ts项目",
-    "time": "2022/7/2 23:13:21",
-    "tag": [
-      "前端工程化"
-    ]
-  },
-  {
-    "title": "circledown auto create",
-    "detail": "",
-    "time": "2022/7/2 17:03:42",
-    "tag": [
-      "前端工程化"
-    ]
-  },
-  {
-    "title": "Typescript 类型谓词辨析类型",
-    "detail": "通过函数接受泛型参数，使用泛型和类型谓词来辨析类型",
-    "time": "2022/7/3 22:11:44",
-    "tag": [
-      "typescript",
-      "前端工程化"
-    ]
-  }
+	{
+		"title": "vue用marked渲染markdown",
+		"detail": "不使用vite插件来解析markdown",
+		"time": "2022/7/2 23:17:19",
+		"tag": ["vue"]
+	},
+	{
+		"title": "pnpm管理monorepo",
+		"detail": "从初始化到rollup打包monorepo的ts项目",
+		"time": "2022/7/2 23:13:21",
+		"tag": ["前端工程化"]
+	},
+	{
+		"title": "circledown auto create",
+		"detail": "",
+		"time": "2022/7/2 17:03:42",
+		"tag": ["前端工程化"]
+	},
+	{
+		"title": "Typescript 类型谓词辨析类型",
+		"detail": "通过函数接受泛型参数，使用泛型和类型谓词来辨析类型",
+		"time": "2022/7/3 22:11:44",
+		"tag": ["typescript", "前端工程化"]
+	},
+	{
+		"title": "前端音频可视化分析",
+		"detail": "通过buffer的数组数据用canvas进行绘制波形图",
+		"time": "2022/7/12 12:47:49",
+		"tag": ["HTML", "Web Audio", "javascript"]
+	}
 ]
