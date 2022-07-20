@@ -23,6 +23,14 @@ const contentList: ContentType[] = [{
 	time: '2022-07-06',
 	detail: '自动生成所有配置文件的基于mirai-ts的mirai机器人',
 	link: 'https://github.com/Circkoooooo/Mirai-Generator'
+},
+{
+	title: 'NeteaseMusic-Vue3',
+	imgPath: 'img/neteasemusic.png',
+	time: '2022-07-12',
+	detail: '网易云音乐',
+	link: 'https://github.com/Circkoooooo/Neteasecloudmusic-vue3'
+
 }
 ]
 
